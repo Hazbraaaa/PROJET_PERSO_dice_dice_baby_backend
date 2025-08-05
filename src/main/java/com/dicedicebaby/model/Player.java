@@ -23,7 +23,7 @@ public class Player {
     private Game game;
 
     @Column(name = "hand")
-    private List<Integer> hand;
+    private String hand;
 
     @Column(name = "score")
     private int score;
@@ -44,7 +44,7 @@ public class Player {
     public Player() {
     }
 
-    public Player(User user, Game game, List<Integer> hand, int score, int nbOfPieces) {
+    public Player(User user, Game game, String hand, int score, int nbOfPieces) {
         this.user = user;
         this.game = game;
         this.hand = hand;
@@ -74,11 +74,11 @@ public class Player {
         this.game = game;
     }
 
-    public List<Integer> getHand() {
+    public String getHand() {
         return hand;
     }
 
-    public void setHand(List<Integer> hand) {
+    public void setHand(String hand) {
         this.hand = hand;
     }
 
